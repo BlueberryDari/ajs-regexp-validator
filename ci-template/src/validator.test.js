@@ -1,9 +1,9 @@
-import Validator from "./validator.js";
-const validator = new Validator;
+import Validator from "../src/validator.js";
+const validator = new Validator();
 
 describe('Validator', () => {
   describe('validateUsername', () => {
-    test('should work for valid usernames', () => {
+    test('should return true for valid usernames', () => {
       expect(validator.validateUsername('validUser')).toBe(true);
       expect(validator.validateUsername('name_sf')).toBe(true);
       expect(validator.validateUsername('a')).toBe(true);
